@@ -1,0 +1,81 @@
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: morgovai-postgres-prod
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - morgovai-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: morgovai-redis-prod
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - morgovai-network
+
+  qdrant:
+    image: qdrant/qdrant:v1.7.4
+    container_name: morgovai-qdrant-prod
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - morgovai-network
+
+  backend:
+    build: ./backend
+    container_name: morgovai-backend-prod
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6334
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      qdrant:
+        condition: service_started
+    networks:
+      - morgovai-network
+
+  frontend:
+    build: ./frontend
+    container_name: morgovai-frontend-prod
+    ports:
+      - "4000:4000"
+    depends_on:
+      - backend
+    networks:
+      - morgovai-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  qdrant_data:
+
+networks:
+  morgovai-network:
+    driver: bridge

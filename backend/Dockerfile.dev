@@ -1,0 +1,22 @@
+FROM eclipse-temurin:21-jdk-alpine
+
+RUN apk add --no-cache bash
+
+WORKDIR /app
+
+# 1. Copy only the wrapper files for caching
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle settings.gradle ./
+
+# 2. Fix permissions and warm up the Gradle 9.1 daemon
+RUN chmod +x gradlew && ./gradlew --version --no-daemon
+
+# 3. Copy source
+COPY src src
+
+EXPOSE 8080 5005
+
+# 4. Use the "Exec Form" for the Entrypoint. 
+# This handles signals (like Ctrl+C) correctly.
+ENTRYPOINT ["./gradlew", "bootRun", "--no-daemon", "-PjvmArgs='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'"]
