@@ -46,7 +46,7 @@ spring:
         port: ${QDRANT_PORT:6334}
         api-key: ${QDRANT_API_KEY:}
         collection-name: ${QDRANT_COLLECTION:morgovai}
-        initialize-schema: true
+        initialize-schema: false
         dimensions: 1536
 ---
 spring:

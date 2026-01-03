@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       PGDATA: /var/lib/postgresql/18/docker
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql
     healthcheck:
@@ -35,6 +35,8 @@ services:
       - "6334:6334"
     volumes:
       - qdrant_data:/qdrant/storage
+      - ./qdrant-config.yaml:/qdrant/config/custom-config.yaml
+    command: ["/qdrant/qdrant", "--config-path", "/qdrant/config/custom-config.yaml"]
 
   backend:
     build:
