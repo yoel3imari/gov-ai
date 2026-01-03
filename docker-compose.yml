@@ -27,7 +27,7 @@ services:
       - morgovai-network
 
   qdrant:
-    image: qdrant/qdrant:v1.7.4
+    image: qdrant/qdrant:v1.13.0
     container_name: morgovai-qdrant-prod
     volumes:
       - qdrant_data:/qdrant/storage

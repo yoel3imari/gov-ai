@@ -1,22 +1,32 @@
-FROM eclipse-temurin:21-jdk-alpine
+# Development Dockerfile with hot reload and debugging support
+FROM maven:3.9-eclipse-temurin-25
 
-RUN apk add --no-cache bash
+# Install curl for health checks
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
+# Set working directory
 WORKDIR /app
 
-# 1. Copy only the wrapper files for caching
-COPY gradlew .
-COPY gradle gradle
-COPY build.gradle settings.gradle ./
+# Create Maven wrapper executable
+COPY mvnw .
+RUN chmod +x ./mvnw
 
-# 2. Fix permissions and warm up the Gradle 9.1 daemon
-RUN chmod +x gradlew && ./gradlew --version --no-daemon
+# Copy Maven configuration
+COPY .mvn ./.mvn
+COPY pom.xml .
 
-# 3. Copy source
-COPY src src
+# Download dependencies first for better layer caching
+RUN ./mvnw dependency:go-offline -B
 
+# Copy source code
+COPY src ./src
+
+# Expose ports for application and debugging
 EXPOSE 8080 5005
 
-# 4. Use the "Exec Form" for the Entrypoint. 
-# This handles signals (like Ctrl+C) correctly.
-ENTRYPOINT ["./gradlew", "bootRun", "--no-daemon", "-PjvmArgs='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'"]
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+  CMD curl -f http://localhost:8080/actuator/health || exit 1
+
+# Start application in debug mode with hot reload
+CMD ["sh", "-c", "./mvnw spring-boot:run -Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005' -Dspring-boot.run.profiles=dev"]

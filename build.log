@@ -1,0 +1,169 @@
+Attaching to morgovai-backend-dev
+morgovai-backend-dev  | To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+morgovai-backend-dev  | Daemon will be stopped at the end of the build 
+morgovai-backend-dev  | > Task :compileJava
+morgovai-backend-dev  | > Task :processResources
+morgovai-backend-dev  | > Task :classes
+morgovai-backend-dev  | > Task :resolveMainClassName
+morgovai-backend-dev  | 
+morgovai-backend-dev  | > Task :bootRun
+morgovai-backend-dev  | 
+morgovai-backend-dev  |   .   ____          _            __ _ _
+morgovai-backend-dev  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+morgovai-backend-dev  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+morgovai-backend-dev  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+morgovai-backend-dev  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+morgovai-backend-dev  |  =========|_|==============|___/=/_/_/_/
+morgovai-backend-dev  | 
+morgovai-backend-dev  |  :: Spring Boot ::                (v3.5.9)
+morgovai-backend-dev  | 
+morgovai-backend-dev  | 2026-01-03T00:00:50.917Z  INFO 147 --- [morgovai] [           main] com.xozev.mogovai.MogovaiApplication     : Starting MogovaiApplication using Java 21.0.9 with PID 147 (/app/build/classes/java/main started by root in /app)
+morgovai-backend-dev  | 2026-01-03T00:00:50.927Z  INFO 147 --- [morgovai] [           main] com.xozev.mogovai.MogovaiApplication     : The following 1 profile is active: "dev"
+morgovai-backend-dev  | 2026-01-03T00:00:52.235Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+morgovai-backend-dev  | 2026-01-03T00:00:52.237Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+morgovai-backend-dev  | 2026-01-03T00:00:52.269Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+morgovai-backend-dev  | 2026-01-03T00:00:52.297Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+morgovai-backend-dev  | 2026-01-03T00:00:52.299Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+morgovai-backend-dev  | 2026-01-03T00:00:52.313Z  INFO 147 --- [morgovai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+morgovai-backend-dev  | 2026-01-03T00:00:53.119Z  INFO 147 --- [morgovai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+morgovai-backend-dev  | 2026-01-03T00:00:53.146Z  INFO 147 --- [morgovai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+morgovai-backend-dev  | 2026-01-03T00:00:53.147Z  INFO 147 --- [morgovai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+morgovai-backend-dev  | 2026-01-03T00:00:53.231Z  INFO 147 --- [morgovai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+morgovai-backend-dev  | 2026-01-03T00:00:53.234Z  INFO 147 --- [morgovai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2158 ms
+morgovai-backend-dev  | 2026-01-03T00:00:53.491Z  INFO 147 --- [morgovai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+morgovai-backend-dev  | 2026-01-03T00:00:53.554Z  INFO 147 --- [morgovai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+morgovai-backend-dev  | 2026-01-03T00:00:53.616Z  INFO 147 --- [morgovai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+morgovai-backend-dev  | 2026-01-03T00:00:54.067Z  INFO 147 --- [morgovai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+morgovai-backend-dev  | 2026-01-03T00:00:54.109Z  INFO 147 --- [morgovai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+morgovai-backend-dev  | 2026-01-03T00:00:54.315Z  INFO 147 --- [morgovai] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2152fde5
+morgovai-backend-dev  | 2026-01-03T00:00:54.317Z  INFO 147 --- [morgovai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+morgovai-backend-dev  | 2026-01-03T00:00:54.359Z  WARN 147 --- [morgovai] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+morgovai-backend-dev  | 2026-01-03T00:00:54.382Z  INFO 147 --- [morgovai] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+morgovai-backend-dev  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+morgovai-backend-dev  | 	Database driver: undefined/unknown
+morgovai-backend-dev  | 	Database version: 18.1
+morgovai-backend-dev  | 	Autocommit mode: undefined/unknown
+morgovai-backend-dev  | 	Isolation level: undefined/unknown
+morgovai-backend-dev  | 	Minimum pool size: undefined/unknown
+morgovai-backend-dev  | 	Maximum pool size: undefined/unknown
+morgovai-backend-dev  | 2026-01-03T00:00:54.869Z  INFO 147 --- [morgovai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+morgovai-backend-dev  | 2026-01-03T00:00:54.876Z  INFO 147 --- [morgovai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+morgovai-backend-dev  | 2026-01-03T00:00:55.014Z  WARN 147 --- [morgovai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+morgovai-backend-dev  | 2026-01-03T00:00:57.269Z  WARN 147 --- [morgovai] [           main] io.qdrant.client.QdrantGrpcClient        : Qdrant client version 1.13.0 is incompatible with server version 1.7.4. Major versions should match and minor version difference must not exceed 1. Set checkCompatibility=false to skip version check.
+morgovai-backend-dev  | 2026-01-03T00:00:58.649Z  WARN 147 --- [morgovai] [           main] o.s.a.r.a.SpringAiRetryAutoConfiguration : Retry error. Retry count: 1, Exception: HTTP 405 - No response body available
+morgovai-backend-dev  | 
+morgovai-backend-dev  | org.springframework.ai.retry.NonTransientAiException: HTTP 405 - No response body available
+morgovai-backend-dev  | 	at org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration$2.handleError(SpringAiRetryAutoConfiguration.java:126) ~[spring-ai-autoconfigure-retry-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:838) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:827) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:826) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:782) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:586) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:540) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:821) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:781) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:777) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.api.OpenAiApi.embeddings(OpenAiApi.java:327) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$1(OpenAiEmbeddingModel.java:168) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar:na]
+morgovai-backend-dev  | 	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar:na]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$3(OpenAiEmbeddingModel.java:168) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.7.jar:1.15.7]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:166) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:67) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:49) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:70) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:95) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.vectorstore.qdrant.QdrantVectorStore.afterPropertiesSet(QdrantVectorStore.java:319) ~[spring-ai-qdrant-store-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at com.xozev.mogovai.MogovaiApplication.main(MogovaiApplication.java:10) ~[main/:na]
+morgovai-backend-dev  | 
+morgovai-backend-dev  | 2026-01-03T00:00:58.656Z  WARN 147 --- [morgovai] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: HTTP 405 - No response body available
+morgovai-backend-dev  | 2026-01-03T00:00:58.668Z  INFO 147 --- [morgovai] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+morgovai-backend-dev  | 2026-01-03T00:00:58.674Z  INFO 147 --- [morgovai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+morgovai-backend-dev  | 2026-01-03T00:00:58.690Z  INFO 147 --- [morgovai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+morgovai-backend-dev  | 2026-01-03T00:00:58.699Z  INFO 147 --- [morgovai] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+morgovai-backend-dev  | 2026-01-03T00:00:58.722Z  INFO 147 --- [morgovai] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+morgovai-backend-dev  | 
+morgovai-backend-dev  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+morgovai-backend-dev  | 2026-01-03T00:00:58.758Z ERROR 147 --- [morgovai] [           main] o.s.boot.SpringApplication               : Application run failed
+morgovai-backend-dev  | 
+morgovai-backend-dev  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vectorStore' defined in class path resource [org/springframework/ai/vectorstore/qdrant/autoconfigure/QdrantVectorStoreAutoConfiguration.class]: HTTP 405 - No response body available
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+morgovai-backend-dev  | 	at com.xozev.mogovai.MogovaiApplication.main(MogovaiApplication.java:10) ~[main/:na]
+morgovai-backend-dev  | Caused by: org.springframework.ai.retry.NonTransientAiException: HTTP 405 - No response body available
+morgovai-backend-dev  | 	at org.springframework.ai.retry.autoconfigure.SpringAiRetryAutoConfiguration$2.handleError(SpringAiRetryAutoConfiguration.java:126) ~[spring-ai-autoconfigure-retry-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:838) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:827) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:216) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:826) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:782) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:586) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:540) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:821) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:781) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:777) ~[spring-web-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.api.OpenAiApi.embeddings(OpenAiApi.java:327) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$1(OpenAiEmbeddingModel.java:168) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar:na]
+morgovai-backend-dev  | 	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar:na]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.lambda$call$3(OpenAiEmbeddingModel.java:168) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.7.jar:1.15.7]
+morgovai-backend-dev  | 	at org.springframework.ai.openai.OpenAiEmbeddingModel.call(OpenAiEmbeddingModel.java:166) ~[spring-ai-openai-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:67) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.EmbeddingModel.embed(EmbeddingModel.java:49) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:70) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.embedding.AbstractEmbeddingModel.dimensions(AbstractEmbeddingModel.java:95) ~[spring-ai-model-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.ai.vectorstore.qdrant.QdrantVectorStore.afterPropertiesSet(QdrantVectorStore.java:319) ~[spring-ai-qdrant-store-1.1.2.jar:1.1.2]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+morgovai-backend-dev  | 	... 18 common frames omitted
+morgovai-backend-dev  | 
+morgovai-backend-dev  | 
+morgovai-backend-dev  | > Task :bootRun FAILED
+morgovai-backend-dev  | 4 actionable tasks: 4 executed
+[Kmorgovai-backend-dev exited with code 1

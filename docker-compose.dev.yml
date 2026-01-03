@@ -28,7 +28,7 @@ services:
     command: redis-server --appendonly yes
 
   qdrant:
-    image: qdrant/qdrant:v1.7.4
+    image: qdrant/qdrant:v1.13.0
     container_name: morgovai-qdrant-dev
     ports:
       - "6333:6333"
@@ -58,7 +58,6 @@ services:
       - "5005:5005"
     volumes:
       - ./backend:/app
-      - gradle_cache:/root/.gradle
     depends_on:
       postgres:
         condition: service_healthy

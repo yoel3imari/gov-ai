@@ -1,13 +1,13 @@
-package com.xozev.mogovai;
+package com.xozev.morgovai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MogovaiApplication {
+public class MorgovaiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MogovaiApplication.class, args);
+		SpringApplication.run(MorgovaiApplication.class, args);
 	}
 
 }

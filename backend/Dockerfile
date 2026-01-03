@@ -1,21 +1,37 @@
-# Use OpenJDK 21 for Java 21
-FROM oeclipse-temurin:25-jdk-alpine
+# Multi-stage build for production
+# Build stage
+FROM maven:3.9-eclipse-temurin-25 AS builder
 
-# Set working directory
 WORKDIR /app
 
-# Copy Gradle wrapper and build files
-COPY gradlew gradlew.bat build.gradle settings.gradle ./
-COPY gradle gradle/
+# Copy pom.xml and download dependencies
+COPY pom.xml .
+COPY mvnw .
+COPY .mvn ./.mvn
+RUN ./mvnw dependency:go-offline -B
 
-# Copy source code
-COPY src src/
+# Copy source code and build
+COPY src ./src
+RUN ./mvnw clean package -DskipTests -B
 
-# Build the application
-RUN ./gradlew build -x test
+# Runtime stage
+FROM eclipse-temurin:25-jre-alpine
+
+# Install curl for health checks
+RUN apk --no-cache add curl
+
+# Create app directory
+WORKDIR /app
+
+# Copy JAR from builder stage
+COPY --from=builder /app/target/*.war app.war
 
 # Expose port
 EXPOSE 8080
 
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+  CMD curl -f http://localhost:8080/actuator/health || exit 1
+
 # Run the application
-CMD ["java", "-jar", "build/libs/morgovai-0.0.1-SNAPSHOT.war"]
+CMD ["java", "-jar", "app.war"]
