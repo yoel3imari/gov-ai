@@ -1,6 +1,6 @@
 actors:
 - admin
-- users (no login)
+- users (no auth)
 
 use cases:
 
